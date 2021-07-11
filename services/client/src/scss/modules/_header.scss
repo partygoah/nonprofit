@@ -1,6 +1,69 @@
 .header {
+  height: 175px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: none !important;
+  //justify-content: space-between;
+  // flex-direction: column;
+  justify-content: center; // box-shadow: none !important;
+  background-color: white;
+  // padding-top: 0.5em;
+  @media screen and (max-width: 550px) {
+    height: 200px;
+    padding-top: 20px;
+  }
+
+  .tabs {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    //on mobile space-evenly space-around ??
+    justify-content: center;
+    @media only screen and (max-width: 550px) {
+      justify-content: space-around;
+      // flex-direction: column;
+      flex-wrap: wrap;
+      // min-width: 30%;
+    }
+
+    .tab {
+      padding: 20px 20px;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: 'Calibri';
+      // font-family: 'Roboto', sans-serif;
+      // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+      letter-spacing: 0.1em;
+      color: black;
+      cursor: pointer;
+
+      @media only screen and (max-width: 800px) {
+        padding: 5px 5px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+        transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
+    }
+  }
+
+  .logo {
+    height: 160px;
+    width: 160px;
+    padding-top: 15px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+    //margin: 10px;
+
+    @media only screen and (max-width: 600px) {
+      height: 145px;
+      width: 145px;
+    }
+  }
 }

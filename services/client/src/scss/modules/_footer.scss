@@ -1,12 +1,98 @@
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
+  height: 160px;
+  padding: 1rem 1rem;
+  background-color: white;
+  //font-family: 'Roboto';
+  // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Cambria,' -
+  //  Cochin, Georgia, Times, 'Times New Roman', sans-serif;
 
-  .help-list,
-  .socials {
+  @media only screen and (max-width: 600px) {
+    height: 290px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    height: 330px;
+  }
+
+  .help-list {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     width: 100%;
+    font-size: 0.8rem;
+
+    .help-item {
+      margin: 0 1rem;
+    }
+  }
+
+  .content-row {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-container {
+    // align-self: flex-end;
+    //margin: 25px 50px;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    width: 160px;
+
+    // @media only screen and (max-width: 600px) {
+    //   width: 350px;
+    // }
+    @media only screen and (max-width: 800px) {
+      width: 120px;
+      height: 80px;
+      align-self: center;
+    }
+  }
+
+  .social-logo {
+    padding: 0 0.5rem;
+    // display: inline-block;
+    // height: 20px;
+    // width: 25px;
+    max-width: 100%;
+    max-height: 100%;
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+      transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+  }
+
+  .social-logo-mobile {
+    padding: 0 0.5rem;
+    // display: inline-block;
+    // height: 20px;
+    // width: 25px;
+    max-width: 100%;
+    max-height: 100%;
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+      transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+  }
+
+  .social {
+    vertical-align: middle;
+    //   max-width:100%;
+    // max-height:100%;
+    max-width: 100%;
+    max-height: 100%;
+    //overflow: auto;
   }
 }

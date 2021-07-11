@@ -1,10 +1,12 @@
 .accordion-summary {
   font-size: 18px;
   border-bottom: 0.5px solid rgb(194, 192, 192) !important;
+  color: rgba(52, 54, 56, 0.8);
 }
 
 .accordion-details {
   flex-direction: column;
+  color: rgba(52, 54, 56, 0.8);
 
   .accordion-paragraph {
     margin: 8px 0;

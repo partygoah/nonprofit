@@ -1,0 +1,15 @@
+// .support {
+//   //   display: flex;
+//   //   flex-direction: row;
+//   //   align-items: center;
+//   //   padding: 20px 80px;
+// }
+
+.support-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}

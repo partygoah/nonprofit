@@ -1,12 +1,12 @@
 html,
 body {
-  font-family: 'Spectral', serif;
+  font-family: 'Source Sans Pro', serif;
   background-color: rgb(226, 230, 240);
 
   height: 100%;
   line-height: 1.75;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+:is(h1, h2, h4, h5, h6) {
   text-align: center;
 }

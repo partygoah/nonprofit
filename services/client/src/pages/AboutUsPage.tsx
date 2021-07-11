@@ -1,16 +1,19 @@
+import React from 'react';
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import React from 'react';
+
+import { Team } from '../components/Team';
+import jau_dabar_gele from '../assets/jau_dabar_gele.png';
 
 export const AboutUsPage: React.FC = () => {
   return (
     <>
       <div className='page-content'>
-        <Accordion>
+        <Accordion defaultExpanded>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls='reasons'
@@ -21,19 +24,55 @@ export const AboutUsPage: React.FC = () => {
           </AccordionSummary>
           <AccordionDetails className='accordion-details'>
             <p className='accordion-paragraph'>
+              <div
+                style={{
+                  textAlign: 'center',
+                  // justifyItems: 'center',
+                  // verticalAlign: 'middle',
+                }}
+              >
+                <img
+                  src={jau_dabar_gele}
+                  alt='flower'
+                  className='article-image'
+                  style={{ maxHeight: '40vh' }}
+                />
+              </div>
               Šių dienų statistika demaskuoja skaudžią tiesą – Lietuvos
               gyventojų emocinė sveikata yra trapi, dažnai apleista ir
               stigmatizuota. Prieš trejus metus Pasaulio sveikatos organizacijos
-              paskelbti duomenys atskleidė, kad pirmaujame pagal savižudybių
-              skaičių
-              <sup className='reference'>1</sup>. Be to, spręsdami problemas ar
-              jų vengdami dažnai griebiamės ir specialistų nepatvirtintų
-              priemonių – alkoholio. 2016 metais Lietuva buvo antra pasaulyje
-              pagal suvartojamo alkoholio kiekį
-              <sup className='reference'>2</sup>. Vis dar didelė, atvira žaizda
-              šalyje – smurtas. Anot 2017 m. Lietuvos Statistikos departamento
-              duomenų, šalyje kasdien užfiksuojama 30 smurto artimoje aplinkoje
-              atvejų<sup className='reference'>3</sup>.
+              paskelbti duomenys atskleidė, kad pirmaujame pagal{' '}
+              <a
+                href='https://worldpopulationreview.com/country-rankings/suicide-rate-by-country'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'inherit' }}
+              >
+                savižudybių skaičių
+              </a>
+              . Be to, spręsdami problemas ar jų vengdami dažnai griebiamės ir
+              specialistų nepatvirtintų priemonių – alkoholio. 2016 metais
+              Lietuva buvo antra pasaulyje pagal suvartojamo{' '}
+              <a
+                href='https://ourworldindata.org/grapher/total-alcohol-consumption-per-capita-litres-of-pure-alcohol?time=2015'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'inherit' }}
+              >
+                alkoholio kiekį
+              </a>
+              . Vis dar didelė, atvira žaizda šalyje – smurtas. Anot 2017 m.
+              Lietuvos Statistikos departamento duomenų, šalyje kasdien
+              užfiksuojama{' '}
+              <a
+                href='https://osp.stat.gov.lt/infografikas30'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'inherit' }}
+              >
+                30 smurto artimoje aplinkoje atvejų
+              </a>
+              .
             </p>
             <p className='accordion-paragraph'>
               Aukšti savižudybių, priklausomybių ir emocinį nestabilumą
@@ -43,6 +82,14 @@ export const AboutUsPage: React.FC = () => {
               gerinimo kelyje.
             </p>
             <p className='accordion-paragraph'>
+              Tvirtai tikime, kad minėtos problemos yra sisteminės. Mūsų
+              nuomone, efektyviausias būdas spręsti tokias, seniai
+              įsišaknijusias problemas, yra atsigręžiant į pradinį tašką –
+              žmogaus psichiką. Švietimas yra įrankis, kuriuo naudodamiesi
+              tikimės padidinti Lietuvos gyventojų norą nuosekliai rūpintis savo
+              psichika, ir taip prisidėti prie minėtų problemų prevencijos.
+            </p>
+            <p className='accordion-paragraph'>
               Vertiname Vyriausybės, kitų organizacijų ir aktyvistų pastangas,
               tad stengiamės dalintis kuo unikalesne informacija ir žiniomis.
               Nesiekiame būti geriausiais ar konkuruoti. Priešingai – norime
@@ -50,11 +97,27 @@ export const AboutUsPage: React.FC = () => {
               emocinę sveikatą ir padėti žmonėms.
             </p>
             <p className='accordion-paragraph'>
-              Informacija šiame puslapyje, yra žvilgsnis iš gelmių psichologijos
-              perspektyvos iš Jungistinės psichologijos pakraipos. Žinoma, čia
-              rasite ir kitų psichologijos mokyklų idėjų – mes neprioretizuojame
-              dogmų, greičiau teikiame pirmenybę veiksmingiems ir ilgalaikiams
-              sprendimo būdams.
+              Informacija šiame puslapyje yra žvilgsnis iš{' '}
+              <a
+                href='https://www.vle.lt/straipsnis/gelmiu-psichologija/'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'inherit' }}
+              >
+                gelmių psichologijos
+              </a>{' '}
+              perspektyvos iš{' '}
+              <a
+                href='https://www.vle.lt/straipsnis/gelmiu-psichologija/'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'inherit' }}
+              >
+                Jungistinės psichologijos
+              </a>{' '}
+              pakraipos. Žinoma, čia rasite ir kitų psichologijos mokyklų idėjų
+              – mes neprioretizuojame dogmų, greičiau teikiame pirmenybę
+              veiksmingiems ir ilgalaikiams sprendimo būdams.
             </p>
             <p className='accordion-paragraph'>
               Dalindamiesi gelmių psichologijos įžvalgomis mes nesiekiame
@@ -70,6 +133,170 @@ export const AboutUsPage: React.FC = () => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
+            aria-controls='mission'
+            id='missionAccordionSummary'
+            className='accordion-summary'
+          >
+            Misija
+          </AccordionSummary>
+          <AccordionDetails className='accordion-details'>
+            Mūsų misija yra skleisti informaciją, kuri ne tik įkvėptų, bet ir
+            padėtų Lietuvos gyventojams rūpintis psichikos sveikata. Norime, kad
+            gelmių psichologijos idėjos, galinčios pagerinti žmonių gyvenimo
+            kokybę, būtų pasiekiamos kiekvienam lietuviui.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls='content'
+            id='contentAccordionSummary'
+            className='accordion-summary'
+          >
+            Veikla
+          </AccordionSummary>
+          <AccordionDetails className='accordion-details'>
+            <p>
+              Šiame puslapyje dalinsimės informacija apie analitinę
+              psichologiją, savipagalbą, psichikos sveikatą, emocijų ir kūrybos
+              svarbą, priklausomybes, psichoterapiją, teorines ir praktines
+              žinias apie psichiką, protą ir jų ryšį su kūnu bei fizine
+              sveikata.
+            </p>
+            <p>
+              Norime paminėti, kad psichinių procesų detalės yra aprašomos
+              skirtingai, priklausomai nuo gelmių psichologijos pakraipos.
+              Kitaip tariant, skirtingos pakraipos tuos pačius procesus gali
+              vadinti skirtingais terminais. Nors mūsų straipsniuose bus dažniau
+              naudojami Jungistinės pakraipos terminai, pavyzdžiai ir įžvalgos,
+              tai nereiškia, kad mūsų straipsniai būtinai sutampa su visų kitų
+              Jungistinės pakraipos atstovų nuomonėmis. Tai taip pat nereiškia,
+              kad mes atstovaujame Jungistinei psichologijai ar bet kokiai kitai
+              psichologijos pakraipai; mes tiesiog naudojame šios, arba kitų
+              teorinių krypčių, įžvalgas kaip įrankį.
+            </p>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls='vission'
+            id='vissionAccordionSummary'
+            className='accordion-summary'
+          >
+            Vizija
+          </AccordionSummary>
+          <AccordionDetails className='accordion-details'>
+            Ateityje tikimės, jog mūsų organizacija taps vienu esminių elementų
+            Lietuvos visuomenės psichologinės sveikatos gerinimo mechanizme ir
+            kovos dėl psichologinių žinių bei savipagalbos paskaitų įtraukimo į
+            švietimo sistemą. Svajojame apie valstybę, kurioje rūpinimasis
+            asmeniniu tobulėjimu ir psichologine gerove būtų savaime suprantamai
+            svarbus ir visiems lengvai pasiekiamas.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls='values'
+            id='valuesAccordionSummary'
+            className='accordion-summary'
+          >
+            Vertybės
+          </AccordionSummary>
+          <AccordionDetails
+            className='accordion-details'
+            style={{ alignItems: 'center' }}
+          >
+            {/* Mūsų organizacijos vertybės:*/}
+            <div className='values-list'>
+              <div className='tooltip value'>
+                Altruizmas
+                <span className='tooltiptext'>
+                  Organizacijos tikslas – visiškai altruistiškas. Organizacijos
+                  veiksmai orientuoti tik ir tik į visuomenės gerbūvio gerinimą,
+                  o ne komandos narių asmeninę sėkmę ar piniginius
+                  apdovanojimus.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Sąžiningumas
+                <span className='tooltiptext'>
+                  Tai yra organizacijos pamatas. Skaidrumas tiek komandoje, tiek
+                  su visuomene, valstybe ir kitomis organizacijomis. Mums svarbu
+                  ne konkuruoti, o bendradarbiauti su kitais visuomenės emocinei
+                  sveikatai svarbiais, patikimais informacijos šaltiniais.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Etinių principų laikymasis
+                <span className='tooltiptext'>
+                  Visų išvardytų vertybių laikymasis ir prioritetizavimas.
+                  Aukšta darbo kokybės, komunikacijos etika. Pagarba tiek
+                  komandos, tiek kitiems visuomenės nariams, taip pat – kitaip
+                  manantiems ar net mums prieštaraujantiems
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Holizmas
+                <span className='tooltiptext'>
+                  Vykdydami misiją atsižvelgiame į sistemos visumą ir
+                  neizoliuojame atskirų jos dalių. Turiniu siekiame holistinio
+                  požiūrio į žmogų ir pasaulį – nesusiauriname visko iki atskirų
+                  aspektų, žiūrime į ryšius ir sąveikas tarp skirtingų sistemos
+                  dalių.
+                </span>
+              </div>
+            </div>
+            <div className='values-list'>
+              <div className='tooltip value'>
+                Tvarumas
+                <span className='tooltiptext'>
+                  Pateikiama informacija yra orientuota į tvarius pasirinkimus,
+                  nes mes siekiame prisidėti prie ilgalaikių pokyčių.
+                  Nepropaguojame trumpalaikių sprendimų būdų, netvarių praktikų.
+                  Taip pat prioretizuojame ekologiškai tvarius sprendimus.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Perspektyvizmas
+                <span className='tooltiptext'>
+                  Atpažįstame, kad skirtingas mokslo pakraipas ir pažinimo
+                  modelius kiekvienas skaitantis supranta savitai. Kartu
+                  atpažįstame savo perspektyvą ir atsižvelgiame į galimą
+                  šališkumą, tačiau neatstovaujame vienos dogmos ar tiesos.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Nuoseklumas
+                <span className='tooltiptext'>
+                  Esame nuoseklūs savo veikloje – kada ir kokias idėjas
+                  pristatome. Savo misiją siekiame vykdyti nuosekliai ir
+                  sistemingai.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Nepriklausomumas
+                <span className='tooltiptext'>
+                  Mūsų organizacija nepriklauso nuo valstybės ar kitų
+                  organizacijų. Taip pat esame intelektualiai nepriklausomi nuo
+                  rėmėjų.
+                </span>
+              </div>
+              <div className='tooltip value'>
+                Strategiškumas
+                <span className='tooltiptext'>
+                  Strategiškai planuojame veiklą ir turinį. Tai reiškia, kad
+                  planuojame, apie ką kalbėsime ir kokią įtaką tai ilgainiui
+                  padarys visuomenei.
+                </span>
+              </div>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
             aria-controls='team'
             id='teamAccordionSummary'
             className='accordion-summary'
@@ -77,109 +304,7 @@ export const AboutUsPage: React.FC = () => {
             Komanda
           </AccordionSummary>
           <AccordionDetails className='accordion-details'>
-            <p>
-              <div className='accordion-details-strong'>Dominyka Bodrije</div>
-              <div>
-                <i>Steigėja | Vadovė</i>
-              </div>
-              <div>
-                <i>
-                  Bakalauras: Politika ir žmogaus teisės, Esekso universitetas
-                </i>
-              </div>
-              <div>
-                <i>
-                  Magistras: Jungistinės ir post-Jungistinės studijos, Esekso
-                  universitetas
-                </i>
-              </div>
-            </p>
-            <p className='accordion-paragraph'>
-              <div>
-                Su didele vaikiška svajone pakeisti pasaulį išvažiavau mokytis į
-                Jungtinę Karalystę. Nuo pat pirmo kurso rinkausi
-                psichoanalitikos fakulteto siūlomus modulius, kol galiausiai
-                apsisprendžiau, kad studijuosiu Jungistinės psichologijos
-                magistrą.
-              </div>
-              <div>
-                Visą magistrą su malonumu maudžiausi man be galo įdomiose temose
-                apie žmogaus psichiką, psichoterapijos praktiką, pasąmonę,
-                religijas, visuomenės, meno, politikos ir filosofijos
-                psichologiją. Taip pat jau ne vienerius metus skiriu laiko
-                įvairioms asmenybės tobulėjimo praktikomis, savarankiškai
-                domiuosi asmeniniu tobulėjimu ir norėčiau paraginti domėtis ir
-                kitus. Mano pagrindinis tikslas yra pritaikyti įgytas žinias ir
-                išmoktus įgūdžius Lietuvos visuomenės kontekste.
-              </div>
-            </p>
-            <p className='accordion-paragraph'>
-              Laisvalaikiu daug tapau, rašau, mokausi groti gitara. Temos
-              priverčiančios suklusti mano smalsumui: menai, žmogaus ir sociumo
-              psichika, struktūralizmas, joga, metafizika, sisteminis mąstymas,
-              įv. asmenybės raidos teorijos, epistemologija, mirtis, religija ir
-              dvasingumas, muzika.
-            </p>
-
-            <p>
-              <div>Marius Vaitaitis</div>
-              <div>
-                <i>Steigėjas | Plėtros koordinatorius</i>
-              </div>
-              <div>
-                <i>
-                  Bakalauras: Buhalterinė apskaita ir finansai, Esekso
-                  universitetas
-                </i>
-              </div>
-            </p>
-            <p className='accordion-paragraph'>
-              Nors ir baigiau Apskaitos ir Finansų studijas Esekso universitete,
-              šiuo metu esu duomenų analitikas. Ilgą laiką blaškiausi po
-              Jungtinę Karalystę, Liuksemburgą, tačiau kurį laiką apsisprendžiau
-              pabūti Lietuvoje. Vis tik troškimas įstumti save į nepažįstamą
-              vietą ir suktis kaip išeina dar nėra dingęs. Laisvalaikį karantino
-              metu praleidžiu bėgiodamas, mokydamasis prancūzų kalbos,
-              gilindamas finansų, duomenų analizės, bei programavimo žinias. Na
-              ir žinoma – šachmatai. Pasibaigus karantinui, prie laisvalaikio
-              galėčiau pridėti BBQ su draugais, ko begalo pasiilgau. Temos,
-              kurios niekada neatsibosta: technologijos, finansų rinka, lengvoji
-              atletika, bet manau, su tinkamais žmonėmis – nėra nuobodžių temų.
-            </p>
-
-            <p>
-              <div>Vilius Gudžiūnas</div>
-              <div>
-                <i>Steigėjas | IT specialistas</i>
-              </div>
-              <div>
-                <i>Bakalauras: Matematika, Esekso universitetas.</i>
-              </div>
-            </p>
-            <p className='accordion-paragraph'>
-              <div>
-                Savamokslis programuotojas, šiuo metu mėgaujuosiu visais
-                karantino privalumais. Ilgą laiką gyvenau Jungtinėje
-                Karalystejė, kur studijavau matematiką ir pradėjau mokytis
-                programuoti. Grįžęs į Lietuvą pradėjau dirbti front-end
-                developeriu. Laisvalaikiu sportuoju, stengiuosi neleisti
-                karantinui išbalansuoti sveikatos ir gyvensenos. Retkarčiais
-                mėgstu intensyvias, dažniausiai trunkančias visą naktį
-                ‘geiminimo’ sesijas. Temos kurios niekada neatsibosta:
-                technologijos, kas nutiko Game of Thrones 8 sezonui, 70-ųjų
-                rokas.
-              </div>
-            </p>
-
-            <p>
-              <div>Izabelė Kačinskaitė</div>
-              <div>
-                <i>Savanorė | Redaktorė</i>
-              </div>
-              <div>
-                <i>Bakalauras: nope</i>
-              </div>
-            </p>
+            <Team />
           </AccordionDetails>
         </Accordion>
         <Accordion>
@@ -193,19 +318,16 @@ export const AboutUsPage: React.FC = () => {
           </AccordionSummary>
           <AccordionDetails className='accordion-details'>
             <p className='accordion-paragraph'>
-              Mūsų, įkūrėjų, trijulė būtent šio projekto tikslu susibūrė
-              visiškai atsitiktinai, nors susipažinome dar 2015 metais,
-              besimokydami tame pačiame universitete Anglijoje. Marius visuomet
-              svajojo apie projektą su draugais, ir prisiminęs, kad tiek Vilius,
-              tiek aš (Dominyka) esame užsiminę apie norą dirbti ne pelno
-              siekiančioje organizacijoje, karantino metu pasiūlė pabandyti ką
-              nors sukurti. Man tai buvo tarsi dovana – buvau ką tik baigusi
-              magistro studijas, sėdėjau su dideliu bagažu žinių ir noru jas
-              kažkur panaudoti ir pritaikyti. Tačiau nesugalvojau, kaip tai
-              daryti, ir žinojau, kad viena to nesugebėsiu. Taip gimė mūsų
-              komanda ir projektas: vaikinai sukūrė platformą, kurioje galiu
-              dalintis įvairiomis įžvalgomis, informacija ir atradimais su
-              tikslu prisidėti prie šviesesnės Lietuvos ateities.
+              Susipažinę 2015 metais tapome artimais draugais. Marius visuomet
+              svajojo apie projektą su draugais, ir prisiminęs, kad esu minėjusi
+              apie norą dirbti ne pelno siekiančioje organizacijoje, karantino
+              metu pasiūlė pabandyti ką nors sukurti. Man tai buvo tarsi dovana
+              – buvau ką tik baigusi magistro studijas, sėdėjau su dideliu
+              bagažu žinių ir noru jas kažkur panaudoti ir pritaikyti. Tačiau
+              nesugalvojau, kaip tai daryti, ir žinojau, kad viena to
+              nesugebėsiu. Taip gimė mūsų projektas: buvo sukurta platforma,
+              kurioje galiu dalintis įvairiomis įžvalgomis, informacija ir
+              atradimais su tikslu prisidėti prie šviesesnės Lietuvos ateities.
             </p>
             <p className='accordion-paragraph'>
               Viliamės, kad pavyks ne tiesiog sausai dalintis informacija, bet
@@ -215,7 +337,12 @@ export const AboutUsPage: React.FC = () => {
               prisidėsime prie bent vieno žmogaus sąmoningumo, projektas bus
               vertas kiekvienos prie jo praleistos minutės.
             </p>
-            <p className='authors-name'>-Dominyka</p>
+            <p className='accordion-paragraph'>
+              Noriu padėkoti mūsų savanorėms už norą padėti ir prisidėti prie
+              projekto vystymo. O dar didesnis ačiū Viliui Gudžiūnui, padėjusiam
+              pastatyti šio projekto pamatus. Be jo šio projekto nebūtų.
+            </p>
+            <p className='authors-name'> – Dominyka</p>
           </AccordionDetails>
         </Accordion>
       </div>
